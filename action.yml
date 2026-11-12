@@ -1,5 +1,5 @@
 name: Pantheon announce
-description: Turn a release into a launch kit (an X thread, a LinkedIn post, Threads and Bluesky posts and more), drafted in your brand voice and waiting for approval in Pantheon.
+description: Turn a GitHub release into a launch kit, drafted in your brand voice and waiting for approval in Pantheon.
 author: Pantheon
 branding:
   icon: send
