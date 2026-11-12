@@ -1,0 +1,36 @@
+name: Pantheon announce
+description: Turn a release into a launch kit (an X thread, a LinkedIn post, Threads and Bluesky posts and more), drafted in your brand voice and waiting for approval in Pantheon.
+author: Pantheon
+branding:
+  icon: send
+  color: gray-dark
+inputs:
+  api-url:
+    description: Another Pantheon API than https://api.usepantheon.app (staging, self-hosted). Leave it out normally.
+    required: false
+    default: https://api.usepantheon.app
+  tag:
+    description: The release tag to announce. Defaults to the release that triggered the workflow.
+    required: false
+  notes:
+    description: Release notes to draft from when the release has none on GitHub.
+    required: false
+  api-key:
+    description: >-
+      A scoped Pantheon API key (post:create) stored as a repository secret. Leave empty to sign in with GitHub's OIDC
+      token instead (needs `permissions: id-token: write` and the repository connected in Pantheon).
+    required: false
+  audience:
+    description: The OIDC audience Pantheon expects.
+    required: false
+    default: pantheon
+outputs:
+  launch-kit-id:
+    description: The launch kit Pantheon created.
+  posts:
+    description: How many drafts are waiting for approval.
+  status:
+    description: ready, skipped (not worth announcing) or failed.
+runs:
+  using: node24
+  main: index.js
