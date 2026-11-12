@@ -61,7 +61,7 @@ Both need a plan with the CLI and GitHub Action (Pro and up). The Action talks t
 
 ## License
 
-[Apache-2.0](LICENSE). Copyright 2026 Pantheon LLC.
+[Apache-2.0](LICENSE). Copyright 2026 Pantheon Labs, Inc.
 
 This repository is published automatically from Pantheon's main codebase; changes made here directly are
 overwritten by the next release.
